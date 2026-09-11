@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+@theme static {
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --color-app: #F4F2EC;
+  --color-surface: #FFFEFA;
+  --color-surface-secondary: #E9ECE7;
+  --color-sidebar: #17231F;
+  --color-sidebar-surface: #21302B;
+  --color-ink: #18201D;
+  --color-secondary: #66706B;
+  --color-muted: #87908B;
+  --color-on-dark: #F6F5EF;
+  --color-primary: #176B5B;
+  --color-primary-hover: #125347;
+  --color-primary-active: #0E433A;
+  --color-primary-tint: #DDECE7;
+  --color-accent: #C66A3D;
+  --color-accent-tint: #F3E2D7;
+  --color-border: #D4D9D3;
+  --color-border-strong: #AEB8B1;
+  --color-focus: #2B806F;
+  --color-success: #2F7A4B;
+  --color-success-bg: #E3F1E7;
+  --color-warning: #A96716;
+  --color-warning-bg: #F8ECD7;
+  --color-danger: #B4473D;
+  --color-danger-bg: #F7E2DF;
+  --color-information: #526D82;
+  --color-information-bg: #E5EBEF;
+  --color-envelope: #176B5B;
+  --color-solar: #C66A3D;
+  --color-people: #8A6A3D;
+  --color-lighting: #D29A38;
+  --color-equipment: #765A74;
+  --color-ventilation: #526D82;
+  --color-infiltration: #7C8983;
+  --color-latent: #9A5261;
+  --color-total: #18201D;
+  --spacing-sidebar: 248px;
+  --spacing-sidebar-collapsed: 72px;
+  --spacing-page: 32px;
+  --spacing-section: 24px;
+  --spacing-field: 16px;
+  --radius-control: 6px;
+  --radius-container: 10px;
+  --radius-panel: 14px;
+  --shadow-card: 0 1px 2px rgb(24 32 29 / 5%);
+  --shadow-modal: 0 16px 40px rgb(24 32 29 / 14%);
+  --text-page: 30px;
+  --text-section: 19px;
+  --text-value: 32px;
+}
+:root { font-family: var(--font-sans); color: var(--color-ink); background: var(--color-app); font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-size: 14px; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+a { color: inherit; }
+button, a, input, select, textarea, summary { outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--color-focus); }
+button, a { transition: background-color 180ms, color 180ms, border-color 180ms; }
+svg { flex-shrink: 0; }
+::selection { background: var(--color-primary-tint); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

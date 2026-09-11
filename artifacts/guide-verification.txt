@@ -1,0 +1,4 @@
+User guide: 1440px, eight sections, no page overflow, working contents and direct links.
+User guide: 1024px, eight sections, no page overflow, working contents and direct links.
+User guide: 768px, eight sections, no page overflow, working contents and direct links.
+User guide: 390px, eight sections, no page overflow, working contents and direct links.

@@ -1,0 +1,45 @@
+Project overview: 1440px, no page overflow or gradients
+Design conditions: 1440px, no page overflow or gradients
+Zones: 1440px, no page overflow or gradients
+Construction: 1440px, no page overflow or gradients
+Internal loads: 1440px, no page overflow or gradients
+Air loads: 1440px, no page overflow or gradients
+Reference tables: 1440px, no page overflow or gradients
+Calculate: 1440px, no page overflow or gradients
+Results: 1440px, no page overflow or gradients
+Reports: 1440px, no page overflow or gradients
+Settings: 1440px, no page overflow or gradients
+Project overview: 1024px, no page overflow or gradients
+Design conditions: 1024px, no page overflow or gradients
+Zones: 1024px, no page overflow or gradients
+Construction: 1024px, no page overflow or gradients
+Internal loads: 1024px, no page overflow or gradients
+Air loads: 1024px, no page overflow or gradients
+Reference tables: 1024px, no page overflow or gradients
+Calculate: 1024px, no page overflow or gradients
+Results: 1024px, no page overflow or gradients
+Reports: 1024px, no page overflow or gradients
+Settings: 1024px, no page overflow or gradients
+Project overview: 768px, no page overflow or gradients
+Design conditions: 768px, no page overflow or gradients
+Zones: 768px, no page overflow or gradients
+Construction: 768px, no page overflow or gradients
+Internal loads: 768px, no page overflow or gradients
+Air loads: 768px, no page overflow or gradients
+Reference tables: 768px, no page overflow or gradients
+Calculate: 768px, no page overflow or gradients
+Results: 768px, no page overflow or gradients
+Reports: 768px, no page overflow or gradients
+Settings: 768px, no page overflow or gradients
+Project overview: 390px, no page overflow or gradients
+Design conditions: 390px, no page overflow or gradients
+Zones: 390px, no page overflow or gradients
+Construction: 390px, no page overflow or gradients
+Internal loads: 390px, no page overflow or gradients
+Air loads: 390px, no page overflow or gradients
+Reference tables: 390px, no page overflow or gradients
+Calculate: 390px, no page overflow or gradients
+Results: 390px, no page overflow or gradients
+Reports: 390px, no page overflow or gradients
+Settings: 390px, no page overflow or gradients
+Zone create, save, duplicate and delete; recalculation; 24 hourly rows; formula expansion; CSV export; local persistence; mobile drawer inert state and Escape; mobile dialog fit: passed.

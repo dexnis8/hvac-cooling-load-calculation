@@ -1,0 +1,5 @@
+1440px: landing layout, workspace entry, reload, Home, guide, Back, and new-project dialog passed.
+1024px: landing layout, workspace entry, reload, Home, guide, Back, and new-project dialog passed.
+768px: landing layout, workspace entry, reload, Home, guide, Back, and new-project dialog passed.
+390px: landing layout, workspace entry, reload, Home, guide, Back, and new-project dialog passed.
+Direct workspace and workflow links work; entering and leaving the landing page preserves saved project data; no browser runtime errors.
