@@ -1,6 +1,28 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { calculate, initialProject, components } from '../src/data.js'
+import { calculate, initialProject, components, convertResult } from '../src/data.js'
+
+test('result units convert all loads without changing inputs or stored results', () => {
+  const base = calculate(initialProject)
+  const snapshot = structuredClone(base)
+  assert.equal(convertResult(base), base)
+  assert.equal(convertResult(null, 'Tons'), null)
+  const tons = convertResult(base, 'Tons')
+  const btu = convertResult(base, 'Btu/hr')
+  assert(Math.abs(btu.design / tons.design - 12000) < 1e-9)
+  assert(Math.abs(btu.design / base.design - 3412.14163312794) < 1e-9)
+  for (const converted of [tons, btu]) {
+    assert.equal(converted.peak.hour, base.peak.hour)
+    assert.equal(converted.zones[0].area, base.zones[0].area)
+    assert.equal(converted.zones[0].lighting, base.zones[0].lighting)
+    for (const hour of converted.hours) {
+      assert(Math.abs(hour.total - components.reduce((sum, [key]) => sum + hour[key], 0)) < 1e-8)
+      assert(Math.abs(hour.total - converted.zones.reduce((sum, zone) => sum + zone.hours[hour.hour].total, 0)) < 1e-8)
+    }
+  }
+  assert.deepEqual(base, snapshot)
+  assert.equal(convertResult(calculate({ ...initialProject, zones: [] }), 'Tons').design, 0)
+})
 
 test('hourly building and zone totals reconcile to every component', () => {
   const result = calculate(initialProject)

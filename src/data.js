@@ -10,6 +10,22 @@ export const initialProject = {
   ],
 }
 export const components = [['envelope', 'Envelope conduction'], ['solar', 'Solar glass'], ['people', 'People'], ['lighting', 'Lighting'], ['equipment', 'Equipment'], ['ventilation', 'Ventilation'], ['infiltration', 'Infiltration'], ['latent', 'Latent load']]
+// International Table Btu; one refrigeration ton equals 12,000 Btu/hr.
+export const loadUnits = { kW: 1, Tons: 3412.14163312794 / 12000, 'Btu/hr': 3412.14163312794 }
+export function convertResult(result, unit = 'kW') {
+  if (!result || unit === 'kW') return result
+  const factor = loadUnits[unit]
+  const convertHour = hour => ({ ...hour, ...Object.fromEntries([...components.map(([key]) => key), 'total'].map(key => [key, hour[key] * factor])) })
+  return {
+    ...result,
+    design: result.design * factor,
+    sensible: result.sensible * factor,
+    nonCoincident: result.nonCoincident * factor,
+    peak: convertHour(result.peak),
+    hours: result.hours.map(convertHour),
+    zones: result.zones.map(zone => ({ ...zone, peak: convertHour(zone.peak), hours: zone.hours.map(convertHour) })),
+  }
+}
 // Illustrative steady-state model, not a CLTD/SCL/CLF implementation.
 export function calculate(project) {
   const zones = project.zones.map(zone => {
