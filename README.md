@@ -1,4 +1,4 @@
-# Mineral cooling-load workspace
+# Etherca cooling-load workspace
 
 A React interface for HVAC project inputs, zone schedules and inspectable illustrative cooling-load results.
 
@@ -23,7 +23,7 @@ The page is maintained in `src/Guide.jsx`. Run `node scripts/verify-guide.mjs` w
 
 ## Design system tokens and components
 
-`src/index.css` is the source of truth for named Tailwind v4 theme tokens. The static theme preserves dynamically selected chart colors in production. It defines the Mineral Green, Graphite and Warm Paper palette, semantic and chart colors, IBM Plex Sans and Mono font families, spacing, control/container/panel radii and two restrained shadows. Google Fonts loads only the requested weights.
+`src/index.css` is the source of truth for named Tailwind v4 theme tokens. The static theme preserves dynamically selected chart colors in production. It defines the Etherca Green, Graphite and Warm Paper palette, semantic and chart colors, IBM Plex Sans and Mono font families, spacing, control/container/panel radii and two restrained shadows. Google Fonts loads only the requested weights.
 
 `src/components.jsx` contains shared buttons, labeled unit fields, selects, notices, empty states, modal dialogs, the responsive hourly chart and the component breakdown. `src/App.css` implements the application shell, worksheet tables and responsive page layouts. No gradients are used.
 
